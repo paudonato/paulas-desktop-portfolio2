@@ -14,3 +14,33 @@
 .work-cover{border-radius:10px}
 
 a:focus-visible,.menu-toggle:focus-visible{outline:2px solid var(--rose);outline-offset:4px}
+
+.hero h1{font-family:"Pinyon Script","Brush Script MT",cursive;font-size:clamp(78px,8vw,112px);font-weight:400;letter-spacing:0;line-height:1.05;color:var(--rose);margin:22px 0 28px;white-space:nowrap}
+
+@media(max-width:1050px){.hero h1{font-size:clamp(70px,8vw,88px)}}
+
+@media(max-width:850px){.hero h1{font-size:clamp(64px,8.5vw,76px)}}
+
+@media(max-width:700px){.hero h1{font-size:clamp(72px,13vw,96px);white-space:normal;margin:18px 0 24px}}
+
+@media(max-width:470px){.hero h1{font-size:clamp(64px,15vw,78px)}}
+
+.ticker{overflow:hidden;max-width:100%;white-space:nowrap}
+
+.ticker .ticker-track{display:flex;width:max-content;animation:ticker-scroll 32s linear infinite;will-change:transform}
+
+.ticker-group{display:flex;flex:0 0 auto;align-items:center;justify-content:space-around;gap:clamp(14px,2vw,28px);width:max-content;min-width:100vw;padding-right:clamp(14px,2vw,28px)}
+
+.ticker-group b{flex:none;color:#fff}
+
+@keyframes ticker-scroll{to{transform:translateX(-50%)}}
+
+.about-grid{grid-template-columns:minmax(0,1fr);justify-items:center}
+
+.about-intro{width:min(100%,680px);text-align:center}
+
+.about-signature{font-family:"Parisienne","Brush Script MT",cursive;font-size:clamp(58px,8vw,86px);font-weight:400;letter-spacing:0;line-height:1.1;color:var(--rose);margin:0 0 14px}
+
+.about-copy{max-width:580px;margin:0 auto;font-size:14px;line-height:1.9;color:var(--muted)}
+
+@media(prefers-reduced-motion:reduce){.ticker .ticker-track{animation:none;will-change:auto;width:100%}.ticker-group:first-child{width:100%;min-width:0;padding:0;flex-wrap:wrap;justify-content:center;white-space:normal}.ticker-group:nth-child(2){display:none}}
